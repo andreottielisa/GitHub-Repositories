@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_toolbar_close_button">Fechar</string>
+    <string name="accessibility_amount_stargazers">Quantidade de estrelas: %s</string>
+    <string name="accessibility_amount_forks">Quantidade de forks: %s</string>
+    <string name="accessibility_user">Usuário: %s</string>
+</resources>

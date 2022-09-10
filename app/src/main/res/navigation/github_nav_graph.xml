@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/github_nav_graph"
+    app:startDestination="@id/repositoriesListFragment">
+
+    <fragment
+        android:id="@+id/repositoriesListFragment"
+        android:name="com.andreotti.github.ui.view.RepositoriesListFragment"
+        android:label="RepositoriesListFragment"
+        tools:layout="@layout/fragment_repositories_list"/>
+
+</navigation>

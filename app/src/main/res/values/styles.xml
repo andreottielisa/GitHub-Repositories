@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ItemRepositoryText">
+        <item name="android:layout_marginStart">@dimen/_16dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="drawableTint">?attr/colorAccent</item>
+        <item name="android:drawablePadding">@dimen/_4dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+</resources>

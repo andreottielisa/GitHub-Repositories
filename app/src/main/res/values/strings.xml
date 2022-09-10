@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GitHub-Repositories</string>
+
+    <string name="repositories_title">Lista de Repositórios</string>
+    <string name="default_error_message">Entramos um problema no processamento. Tente novamente mais tarde.</string>
+
+    <string name="default_alert_button">Ok, Entendi</string>
+    <string name="default_alert_title">Atenção</string>
+    <string name="error_button_try_again">Tentar novamente</string>
+</resources>
