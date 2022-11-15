@@ -9,9 +9,6 @@ import androidx.paging.PagingData
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import com.andreotti.github.R
-import com.andreotti.github.commons.ErrorAction
-import com.andreotti.github.commons.LoadAction
-import com.andreotti.github.commons.SuccessAction
 import com.andreotti.github.commons.getThrowable
 import com.andreotti.github.commons.isError
 import com.andreotti.github.commons.isLoading
@@ -20,6 +17,9 @@ import com.andreotti.github.databinding.FragmentRepositoriesListBinding
 import com.andreotti.github.domain.vo.RepoVO
 import com.andreotti.github.ui.adapter.RepositoriesAdapter
 import com.andreotti.github.ui.viewmodel.RepositoriesViewModel
+import com.andreotti.network.state.ErrorAction
+import com.andreotti.network.state.LoadAction
+import com.andreotti.network.state.SuccessAction
 import com.google.android.material.snackbar.Snackbar
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

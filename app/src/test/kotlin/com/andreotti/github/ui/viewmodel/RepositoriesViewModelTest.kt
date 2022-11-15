@@ -3,11 +3,11 @@ package com.andreotti.github.ui.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import androidx.paging.PagingData
-import com.andreotti.github.commons.UiAction
 import com.andreotti.github.domain.usecase.GetKotlinReposUseCase
 import com.andreotti.github.domain.vo.RepoVO
 import com.andreotti.github.testing.CoroutineRule
 import com.andreotti.github.testing.repoVOMock
+import com.andreotti.network.state.UiAction
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
