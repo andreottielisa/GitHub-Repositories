@@ -3,14 +3,11 @@ package com.andreotti.github.di
 import android.content.res.Resources
 import com.andreotti.github.data.GitHubApi
 import com.andreotti.github.data.repository.GitHubRepository
-import com.andreotti.github.data.repository.GitHubRepositoryImp
 import com.andreotti.github.domain.converter.RepoConverter
 import com.andreotti.github.domain.usecase.GetKotlinReposUseCase
 import com.andreotti.github.ui.viewmodel.RepositoriesViewModel
 import io.mockk.every
 import io.mockk.mockk
-import org.hamcrest.CoreMatchers.instanceOf
-import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Assert.assertNotNull
 import org.junit.Rule
 import org.junit.Test
@@ -45,13 +42,13 @@ class GitHubModuleTest : ClosingKoinTest {
     @Test
     fun `it should provide GitHubRepository`() {
         val repository by inject<GitHubRepository>()
-        assertThat(repository, instanceOf(GitHubRepositoryImp::class.java))
+        assertNotNull(repository)
     }
 
     @Test
     fun `it should provide GetKotlinReposUseCase`() {
-        val repository by inject<GetKotlinReposUseCase>()
-        assertThat(repository, instanceOf(GetKotlinReposUseCase::class.java))
+        val useCase by inject<GetKotlinReposUseCase>()
+        assertNotNull(useCase)
     }
 
     @Test

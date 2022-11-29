@@ -31,7 +31,7 @@ class GetKotlinReposUseCaseTest {
     private val converter: RepoConverter = mockk(relaxed = true) {
         every { convert(any()) } returns repoVOMock
     }
-    private val useCase: GetKotlinReposUseCase = GetKotlinReposImp(repository, converter)
+    private val useCase = GetKotlinReposUseCase(repository, converter)
 
     @Test
     fun `when invoking use case, verify if the repository is called`() {

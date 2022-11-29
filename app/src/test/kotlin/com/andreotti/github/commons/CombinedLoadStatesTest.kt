@@ -5,7 +5,7 @@ import androidx.paging.LoadState
 import androidx.paging.LoadStates
 import io.mockk.mockk
 import org.hamcrest.MatcherAssert.assertThat
-import org.hamcrest.beans.SamePropertyValuesAs
+import org.hamcrest.beans.SamePropertyValuesAs.samePropertyValuesAs
 import org.junit.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertNull
@@ -101,7 +101,7 @@ class CombinedLoadStatesTest {
             source = source
         )
 
-        assertThat(loadStates.getThrowable(), SamePropertyValuesAs(expected, emptyList()))
+        assertThat(loadStates.getThrowable(), samePropertyValuesAs(expected))
     }
 
     @Test
@@ -114,7 +114,7 @@ class CombinedLoadStatesTest {
             source = source
         )
 
-        assertThat(loadStates.getThrowable(), SamePropertyValuesAs(expected, emptyList()))
+        assertThat(loadStates.getThrowable(), samePropertyValuesAs(expected))
     }
 
     @Test

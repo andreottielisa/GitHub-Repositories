@@ -1,10 +1,23 @@
 package com.andreotti.github.domain.usecase
 
 import androidx.paging.PagingData
+import androidx.paging.map
+import com.andreotti.github.data.repository.GitHubRepository
+import com.andreotti.github.domain.converter.RepoConverter
 import com.andreotti.github.domain.vo.RepoVO
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
-internal interface GetKotlinReposUseCase {
+private const val LANGUAGE_REPOS = "language:kotlin"
 
-    operator fun invoke(): Flow<PagingData<RepoVO>>
+internal class GetKotlinReposUseCase(
+    private val repository: GitHubRepository,
+    private val converter: RepoConverter
+) {
+
+    operator fun invoke(): Flow<PagingData<RepoVO>> =
+        repository.getRepos(LANGUAGE_REPOS)
+            .map { pageData ->
+                pageData.map(converter::convert)
+            }
 }
